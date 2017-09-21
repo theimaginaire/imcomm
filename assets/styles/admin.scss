@@ -1,0 +1,41 @@
+@import "common/variables";
+body {
+	font-family: $font-primary !important;
+	font-weight: 300 !important;
+}
+#adminmenuback, #adminmenu, #adminmenuwrap, .wp-ui-notification {
+	background-color: darken($secondary, 15%) !important;
+	font-weight: 100 !important;
+	color:#fff;
+}
+.wp-submenu, #wpadminbar, .update-plugins, #adminmenu li.menu-top:hover, #adminmenu li.opensub>a.menu-top, #adminmenu li>a.menu-top:focus  {
+	background-color: $secondary !important;
+}
+#collapse-button {
+	color: #fff;
+}
+#adminmenu a {
+	color: #fff !important;
+}
+.button-primary {
+	border: none !important;
+	box-shadow: none !important;
+	border-radius: 0 !important;
+	background-color: $brand-primary !important;
+	text-shadow: none !important;
+	&:hover {
+		background-color: $secondary !important;
+		transition: $ease;
+	}
+}
+
+div.mce-toolbar-grp, .quicktags-toolbar {
+	border-bottom: none !important;
+}
+
+.layout-choice {
+	max-width: 100%;
+	height: auto;
+	background-color: #fff;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.05), 0 10px 10px rgba(0,0,0,0.02);
+}

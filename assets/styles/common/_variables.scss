@@ -1,0 +1,32 @@
+// Grid settings
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+
+
+// Colours
+
+$brand-primary: #29abe1;
+$secondary: darken($brand-primary, 20%);
+
+$text: #222;
+
+$grey: #e1e1e1;
+$lightgrey: #f7f8f9;
+$darkgrey: #555;
+
+// Fonts
+
+$font-primary: 'Roboto', sans-serif;
+$font-sec: 'Montserrat', sans-serif;
+
+// Spacing
+
+$smlspace: 1rem 0;
+$midspace: 2rem 0;
+$lgspace: 3rem 0;
+$hgspace: 4rem 0;
+
+// Transitions
+
+$bezier: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+$ease: all ease-in-out 0.9s;
