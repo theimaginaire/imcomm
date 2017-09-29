@@ -20,6 +20,7 @@ $sage_includes = [
   'lib/navwalker.php',   // Navwalker
   'lib/options-page.php',   // Options Page
   'lib/acf.php',   // Custom fields Page
+  'lib/cpt.php',   // Custom fields Page
   'lib/lazyload.php',   // Lazyload
   'lib/shortcodes.php',   // Shortcodes
   'lib/customizer.php' // Theme customizer
