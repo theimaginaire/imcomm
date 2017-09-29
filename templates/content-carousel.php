@@ -25,8 +25,10 @@ elseif(get_field('hero_content')) :
 
 ?>
 <section class="hero" <?php if(get_field('hero_image')): ?> style="background-image:url(<?php the_field('hero_image'); ?>);" <?php endif; ?>>
-	<div class="hero-content">
-	<?php the_field('hero_content'); ?>
+	<div class="container-fluid">
+		<div class="hero-content">
+		<?php the_field('hero_content'); ?>
+		</div>
 	</div>
 </section>
 <?php 

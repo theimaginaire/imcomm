@@ -49,6 +49,7 @@ use Roots\Sage\Wrapper;
     </div><!-- /.wrap -->
 
     <?php
+      get_template_part('templates/content', 'flex');
       get_template_part('templates/content', 'extra'); 
       do_action('get_footer');
       get_template_part('templates/footer');

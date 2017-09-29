@@ -1,5 +1,5 @@
 <header class="header-2">
-<div class="container">
+
     
     <div class="left">
         <a class="navbar-brand" href="#">
@@ -29,6 +29,6 @@
       endif;
       ?>
   </div>
-</div>
+
 </nav>
 </header>

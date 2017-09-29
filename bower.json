@@ -8,6 +8,10 @@
   "private": true,
   "dependencies": {
     "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-beta",
-    "popper.js": "^1.12.3"
+    "popper.js": "^1.12.3",
+    "owl.carousel": "owl-carousel2#^2.2.1",
+    "animate.css": "^3.5.2",
+    "jquery_lazyload": "jquery.lazyload#^1.9.7",
+    "font-awesome": "^4.7.0"
   }
 }

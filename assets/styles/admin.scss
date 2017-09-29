@@ -23,9 +23,11 @@ body {
 	border-radius: 0 !important;
 	background-color: $brand-primary !important;
 	text-shadow: none !important;
+	padding: 0.25rem 1rem !important;
+	height: auto !important;
 	&:hover {
 		background-color: $secondary !important;
-		transition: $ease;
+	
 	}
 }
 

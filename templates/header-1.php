@@ -2,7 +2,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-  <div class="container">
+  <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <?php if(get_field('logo', 'options')): ?>
         <img src="<?php get_field('logo', 'options'); ?>" alt="<?php bloginfo('name'); ?>" />
