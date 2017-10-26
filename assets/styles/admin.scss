@@ -1,32 +1,67 @@
-@import "common/variables";
+$brand-primary: #29abe1;
+$secondary: #e5007e;
+
+$text: #222;
+
+$grey: #aaa;
+$lightgrey: #f7f8f9;
+$darkgrey: #777;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+$font-primary: 'source sans pro', sans-serif;
+$font-sec: 'Montserrat', sans-serif;
+
 body {
 	font-family: $font-primary !important;
-	font-weight: 300 !important;
+	font-weight: 600 !important;
+	background-color: #fff !important;
 }
 #adminmenuback, #adminmenu, #adminmenuwrap, .wp-ui-notification {
-	background-color: darken($secondary, 15%) !important;
+	background-color: $lightgrey;
 	font-weight: 100 !important;
 	color:#fff;
 }
 .wp-submenu, #wpadminbar, .update-plugins, #adminmenu li.menu-top:hover, #adminmenu li.opensub>a.menu-top, #adminmenu li>a.menu-top:focus  {
-	background-color: $secondary !important;
+	background-color: darken($lightgrey, 5%) !important;
+	color: $darkgrey;
+}
+.update-plugins {
+	background-color: $brand-primary !important;
+
+}
+.wp-menu-open {
+	background-color: darken($lightgrey, 10%) !important;
 }
 #collapse-button {
 	color: #fff;
 }
-#adminmenu a {
-	color: #fff !important;
+#adminmenu a, #wpadminbar #adminbarsearch:before, #wpadminbar .ab-icon:before, #wpadminbar .ab-item:before {
+	color: $darkgrey !important;
+}
+#wpadminbar a {
+	color: $darkgrey !important;
+	.ab-label, .ab-icon:before {
+		color: $darkgrey !important;
+	}
+}
+.wp-ui-notification {
+	background-color: $brand-primary !important;
+}
+div.wp-menu-image:before {
+	color: $darkgrey !important;
 }
 .button-primary {
 	border: none !important;
 	box-shadow: none !important;
-	border-radius: 0 !important;
-	background-color: $brand-primary !important;
+	border-radius: 50px !important;
+	background-color: $secondary !important;
 	text-shadow: none !important;
 	padding: 0.25rem 1rem !important;
 	height: auto !important;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 5px 5px rgba(0,0,0,0.12) !important;
 	&:hover {
-		background-color: $secondary !important;
+		background-color: darken($secondary, 10%) !important;
 	
 	}
 }
