@@ -1,26 +1,35 @@
-<header class="header-1">
+<nav class="navbar navbar-expand-sm navbar-light bg-faded">
+  <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
+    <?php 
+    // Check if a logo has been defined, if not show sitename
+    if(get_field('logo', 'options')): ?>
+      <img src="<?php the_field('logo', 'options'); ?>" alt="<?php bloginfo('name'); ?>" class="logo" />
+    <?php
+    else:
+      bloginfo('name');
+    endif; 
+    ?>
+  </a>
+  <button class="navbar-toggler justify-content-end" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Brand -->
+  
 
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <?php if(get_field('logo', 'options')): ?>
-        <img src="<?php get_field('logo', 'options'); ?>" alt="<?php bloginfo('name'); ?>" />
-      <?php else:
-        echo bloginfo('name');
-        endif; ?>  
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <?php
-        if (has_nav_menu('primary_navigation')) :
-          wp_nav_menu(['theme_location' => 'primary_navigation', 'walker' => new wp_bootstrap_navwalker(), 'menu_class' => 'nav navbar-nav pull-xs-right']);
-        endif;
+  <!-- Links -->
+     <?php
+            wp_nav_menu( array(
+                'menu'              => 'primary',
+                'theme_location'    => 'primary_navigation',
+                'depth'             => 2,
+                'container'         => 'div',
+                'container_class'   => 'collapse navbar-collapse justify-content-end',
+                'container_id'      => 'nav-content',
+                'menu_class'        => 'nav navbar-nav',
+                'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                'walker'            => new WP_Bootstrap_Navwalker())
+            );
         ?>
-    </div>
-    </div>
-  </nav>
 
-</header>
+</nav>

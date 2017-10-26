@@ -8,49 +8,44 @@ $lightgrey: #f7f8f9;
 $darkgrey: #777;
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
-$font-primary: 'source sans pro', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+$font-primary: 'Roboto', sans-serif;
 $font-sec: 'Montserrat', sans-serif;
 
 body {
 	font-family: $font-primary !important;
-	font-weight: 600 !important;
-	background-color: #fff !important;
+	font-weight: 500 !important;
+
 }
 #adminmenuback, #adminmenu, #adminmenuwrap, .wp-ui-notification {
-	background-color: $lightgrey;
+	background-color: $text;
 	font-weight: 100 !important;
 	color:#fff;
 }
 .wp-submenu, #wpadminbar, .update-plugins, #adminmenu li.menu-top:hover, #adminmenu li.opensub>a.menu-top, #adminmenu li>a.menu-top:focus  {
-	background-color: darken($lightgrey, 5%) !important;
-	color: $darkgrey;
+	background-color: darken($text, 5%) !important;
+	color: $text !important;
 }
 .update-plugins {
 	background-color: $brand-primary !important;
 
 }
 .wp-menu-open {
-	background-color: darken($lightgrey, 10%) !important;
+	background-color: darken($brand-primary, 10%) !important;
 }
 #collapse-button {
 	color: #fff;
 }
-#adminmenu a, #wpadminbar #adminbarsearch:before, #wpadminbar .ab-icon:before, #wpadminbar .ab-item:before {
-	color: $darkgrey !important;
+ul#adminmenu a.wp-has-current-submenu:after, ul#adminmenu>li.current>a.current:after {
+	display: none;
 }
-#wpadminbar a {
-	color: $darkgrey !important;
-	.ab-label, .ab-icon:before {
-		color: $darkgrey !important;
-	}
+.wp-menu-name {
+	color: #fff !important;
 }
 .wp-ui-notification {
 	background-color: $brand-primary !important;
 }
-div.wp-menu-image:before {
-	color: $darkgrey !important;
-}
+
 .button-primary {
 	border: none !important;
 	box-shadow: none !important;
@@ -59,7 +54,7 @@ div.wp-menu-image:before {
 	text-shadow: none !important;
 	padding: 0.25rem 1rem !important;
 	height: auto !important;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 5px 5px rgba(0,0,0,0.12) !important;
+	
 	&:hover {
 		background-color: darken($secondary, 10%) !important;
 	
