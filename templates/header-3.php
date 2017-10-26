@@ -1,21 +1,52 @@
-<header>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">
-    <?php if(get_field('logo', 'options')): ?>
-      <img src="<?php get_field('logo', 'options'); ?>" alt="<?php bloginfo('name'); ?>" />
-    <?php else:
-      echo bloginfo('name');
-      endif; ?>  
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <?php
-      if (has_nav_menu('primary_navigation')) :
-        wp_nav_menu(['theme_location' => 'primary_navigation', 'walker' => new wp_bootstrap_navwalker(), 'menu_class' => 'nav navbar-nav']);
-      endif;
-      ?>
+<div class="top-bar">
+  <div class="container-fluid">
+          <?php
+            wp_nav_menu( array(
+                'menu'              => 'top-menu',
+                'theme_location'    => 'top_navigation',
+
+                'container'         => 'div',
+                'menu_class'        => 'top-menu justify-content-end')
+            );
+          ?>
   </div>
+</div>
+
+<nav class="navbar navbar-expand-sm navbar-light bg-faded">
+  
+  <!-- Brand -->
+
+  <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
+    <?php 
+    // Check if a logo has been defined, if not show sitename
+    if(get_field('logo', 'options')): ?>
+      <img src="<?php the_field('logo', 'options'); ?>" alt="<?php bloginfo('name'); ?>" class="logo" />
+    <?php
+    else:
+      bloginfo('name');
+    endif; 
+    ?>
+  </a>
+
+  <!-- Toggle -->
+
+  <button class="navbar-toggler justify-content-end" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Links -->
+    <?php
+            wp_nav_menu( array(
+                'menu'              => 'primary',
+                'theme_location'    => 'primary_navigation',
+                'depth'             => 2,
+                'container'         => 'div',
+                'container_class'   => 'collapse navbar-collapse justify-content-end',
+                'container_id'      => 'nav-content',
+                'menu_class'        => 'nav navbar-nav',
+                'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                'walker'            => new WP_Bootstrap_Navwalker())
+            );
+    ?>
+
 </nav>
-</header>

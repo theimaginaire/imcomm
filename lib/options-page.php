@@ -384,7 +384,6 @@ acf_add_local_field_group(array (
 				'header-2' => 'Style 2',
 				'header-3' => 'Style 3',
 				'header-4' => 'Style 4',
-				'header-5' => 'Style 5',
 			),
 			'allow_null' => 0,
 			'other_choice' => 0,
@@ -530,8 +529,7 @@ function my_acf_load_field( $field ) {
         'header-1' => '<img src="'.get_template_directory_uri().'/dist/images/header-1.png" class="layout-choice" />',
         'header-2' => '<img src="'.get_template_directory_uri().'/dist/images/header-2.png" class="layout-choice" />',
         'header-3' => '<img src="'.get_template_directory_uri().'/dist/images/header-3.png" class="layout-choice" />',
-        'header-4' => '<img src="'.get_template_directory_uri().'/dist/images/header-4.png" class="layout-choice" />',
-        'header-5' => '<img src="'.get_template_directory_uri().'/dist/images/header-5.png" class="layout-choice" />',
+        'header-4' => '<img src="'.get_template_directory_uri().'/dist/images/header-4.png" class="layout-choice" />'
 
     );
 

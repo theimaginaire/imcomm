@@ -1,4 +1,7 @@
 <nav class="navbar navbar-expand-sm navbar-light bg-faded">
+  
+  <!-- Brand -->
+
   <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
     <?php 
     // Check if a logo has been defined, if not show sitename
@@ -10,15 +13,15 @@
     endif; 
     ?>
   </a>
+
+  <!-- Toggle -->
+
   <button class="navbar-toggler justify-content-end" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
   </button>
 
-  <!-- Brand -->
-  
-
   <!-- Links -->
-     <?php
+    <?php
             wp_nav_menu( array(
                 'menu'              => 'primary',
                 'theme_location'    => 'primary_navigation',
@@ -30,6 +33,6 @@
                 'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
                 'walker'            => new WP_Bootstrap_Navwalker())
             );
-        ?>
+    ?>
 
 </nav>

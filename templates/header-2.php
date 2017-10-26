@@ -1,6 +1,5 @@
 <header class="header-2">
-
-    
+<div class="container-fluid">
     <div class="left">
         <a class="navbar-brand" href="#">
       <?php if(get_field('logo', 'options')): ?>
@@ -16,19 +15,27 @@
           <li><a href="<?php get_field('header_cta_link', 'options'); ?>" class="btn btn-primary"><?php the_field('header_cta_text', 'options'); ?></a>
         </ul>
     </div>
-</div>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <?php
-      if (has_nav_menu('primary_navigation')) :
-        wp_nav_menu(['theme_location' => 'primary_navigation', 'walker' => new wp_bootstrap_navwalker(), 'menu_class' => 'nav navbar-nav']);
-      endif;
-      ?>
-  </div>
 
+</div>
+<nav class="navbar navbar-expand-sm navbar-light bg-faded">
+  <div class="container">
+  <button class="navbar-toggler justify-content-end" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <?php
+            wp_nav_menu( array(
+                'menu'              => 'primary',
+                'theme_location'    => 'primary_navigation',
+                'depth'             => 2,
+                'container'         => 'div',
+                'container_class'   => 'collapse navbar-collapse justify-content-center',
+                'container_id'      => 'nav-content',
+                'menu_class'        => 'nav navbar-nav',
+                'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                'walker'            => new WP_Bootstrap_Navwalker())
+            );
+    ?>
+  </div>
 </nav>
 </header>
