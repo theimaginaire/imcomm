@@ -15,6 +15,11 @@ function setup() {
   add_theme_support('soil-nice-search');
   add_theme_support('soil-jquery-cdn');
   add_theme_support('soil-relative-urls');
+  
+  // Woocommerce support
+  add_theme_support( 'woocommerce' );
+  add_theme_support( 'wc-product-gallery-lightbox' );
+  add_theme_support( 'wc-product-gallery-slider' );
 
   // Make theme available for translation
   // Community translations can be found at https://github.com/roots/sage-translations
@@ -28,7 +33,9 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus([
     'primary_navigation' => __('Primary Navigation', 'sage'),
-    'top_navigation' => __('Top Navigation', 'sage')
+    'top_navigation' => __('Top Navigation', 'sage'),
+    'footer_prod' => __('Footer Products', 'sage'),
+    'footer_info' => __('Footer Info', 'sage')
   ]);
 
   // Enable post thumbnails

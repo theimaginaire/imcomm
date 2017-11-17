@@ -1,5 +1,5 @@
 $brand-primary: #29abe1;
-$secondary: #e5007e;
+$secondary: darken($brand-primary, 10%);
 
 $text: #222;
 
@@ -20,14 +20,14 @@ body {
 #adminmenuback, #adminmenu, #adminmenuwrap, .wp-ui-notification {
 	background-color: $text;
 	font-weight: 100 !important;
-	color:#fff;
+	color:#fff !important;
 }
 .wp-submenu, #wpadminbar, .update-plugins, #adminmenu li.menu-top:hover, #adminmenu li.opensub>a.menu-top, #adminmenu li>a.menu-top:focus  {
 	background-color: darken($text, 5%) !important;
 	color: $text !important;
 }
 .update-plugins {
-	background-color: $brand-primary !important;
+	background-color: $grey !important;
 
 }
 .wp-menu-open {
