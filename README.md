@@ -1,6 +1,6 @@
-## IM2 Starter Theme
+## IM Commerce Starter Theme
 
-Made for use within Imaginaire Digital, to provide a starting point for projects.
+Made for use within <a href="https://www.imaginaire.co.uk">Imaginaire Digital</a>, to provide a starting point for ecommerce projects.
 
 ## Instructions
 
