@@ -21,6 +21,38 @@
 	}
 }
 
+.hero-area {
+	padding: $smlspace;
+	float: left;
+	width: 100%;
+	.panel-row {
+		display: flex;
+		height: 70vh;
+		width: 100%;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		flex-direction: column;
+		.panel-col {
+			display: flex;
+			background-size: cover;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			float: left;
+			&:nth-child(1){
+				width: 66%;
+				height: 100%;
+				background-color: $text;
+			}
+			&:nth-child(2), &:nth-child(3){
+				height: 34.5vh;
+				width: 33%;
+			}
+		}
+	}
+
+}
+
 .extra {
 	display: flex;
 	flex-wrap: wrap;

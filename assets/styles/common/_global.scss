@@ -27,3 +27,27 @@ body {
 ul {
 	margin-bottom: 0;
 }
+
+// Brand colours
+
+.primary-bg {
+	background: $brand-primary;
+	color: #fff;
+}
+.sec-bg {
+	background: $secondary;
+	color: #fff;
+}
+.red {
+	background-color: $red;
+}
+.green {
+	background-color: $green;
+}
+.amber {
+	background-color: $amber;
+}
+
+a {
+	color: $brand-primary;
+}

@@ -45,3 +45,5 @@ function my_custom_login() {
   echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/login/custom-login.css" />';
 }
 add_action('login_head', 'my_custom_login');
+
+add_filter('show_admin_bar', '__return_false');

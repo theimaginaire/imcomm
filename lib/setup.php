@@ -88,11 +88,10 @@ add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
 function display_sidebar() {
   static $display;
 
-  isset($display) || $display = !in_array(true, [
+  isset($display) || $display = in_array(true, [
     // The sidebar will NOT be displayed if ANY of the following return true.
     // @link https://codex.wordpress.org/Conditional_Tags
     is_404(),
-    is_front_page(),
     is_page_template('template-custom.php'),
   ]);
 
@@ -113,4 +112,4 @@ function assets() {
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
-
+remove_all_actions('woocommerce_sidebar');

@@ -17,4 +17,13 @@ function email($atts=null, $content=null){
 	return $email;
 }
 add_shortcode('email', 'email');
+
+function my_acc(){
+    $myaccount_page_id = get_option( 'woocommerce_myaccount_page_id' );
+    if ( $myaccount_page_id ) {
+      $myaccount_page_url = get_permalink( $myaccount_page_id );
+    }
+    return $myaccount_page_url;
+}
+add_shortcode('my_acc', 'my_acc');
 ?>

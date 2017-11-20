@@ -45,7 +45,7 @@
             items:1,
             lazyLoad:true,
             loop:false,
-            margin:10,
+            margin:0,
             dots: true,
             nav: true,
             navText: ["<i class='fa fa-angle-left'>","<i class='fa fa-angle-right'>"] // Sets what appears in the nav boxes

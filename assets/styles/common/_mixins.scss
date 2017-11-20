@@ -10,6 +10,12 @@
   font-size: calculateRem($size);
 }
 
+@mixin fl-align($align){
+  align-items: $align;
+  justify-content: $align;
+  text-align: $align;
+}
+
 // center vertically and/or horizontally an absolute positioned element
 
 @mixin center($xy:xy) {
@@ -68,5 +74,25 @@ $L:     1170px;
 @keyframes animatedBackground {
   0% { transform: scale(1); }
   100% { transform: scale(0.6); }
+}
+
+// Icons
+
+@mixin im-rotate($degrees, $rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
+  -webkit-transform: rotate($degrees);
+  -moz-transform: rotate($degrees);
+  -ms-transform: rotate($degrees);
+  -o-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
+
+@mixin im-flip($horiz, $vert, $rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
+  -webkit-transform: scale($horiz, $vert);
+  -moz-transform: scale($horiz, $vert);
+  -ms-transform: scale($horiz, $vert);
+  -o-transform: scale($horiz, $vert);
+  transform: scale($horiz, $vert);
 }
 

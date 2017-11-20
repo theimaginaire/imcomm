@@ -19,17 +19,8 @@ use Roots\Sage\Wrapper;
 
       // Which header to be shown
 
-      $header_type = get_field('header_style', 'options');
-      if( $header_type ):
-          $path = 'templates/'.$header_type;
-          if(locate_template($path.'.php')):
-            get_template_part($path);
-          else: 
-            get_template_part('templates/header', 'default');
-          endif;
-      else: 
-        get_template_part('templates/header', 'default');
-      endif;
+      get_template_part('templates/header');
+      
 
 
      

@@ -5,7 +5,7 @@ $sidebar-sm-columns:    4;
 
 // Colours
 
-$brand-primary: #29abe1;
+$brand-primary: #415390;
 $secondary: darken($brand-primary, 20%);
 
 $text: #222;
@@ -13,6 +13,10 @@ $text: #222;
 $grey: #e1e1e1;
 $lightgrey: #f7f8f9;
 $darkgrey: #555;
+
+$red: #ea525b;
+$green: #1fab6e;
+$amber: #ffcc52;
 
 // Fonts
 
@@ -30,3 +34,14 @@ $hgspace: 4rem 0;
 
 $bezier: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
 $ease: all ease-in-out 0.9s;
+
+
+// Icon specific
+
+$im-font-path:        "../fonts" !default;
+$im-font-size-base:   14px !default;
+$im-css-prefix:       im-icon !default;
+$im-background-color: #eee !default;
+$im-li-width:         (30em / 14) !default;
+$im-padding-width:    (1em/3) !default;
+

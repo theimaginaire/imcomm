@@ -14,3 +14,7 @@
     @include make-col($sidebar-sm-columns);
   }
 }
+.content, footer {
+  float: left;
+  width: 100%;
+}

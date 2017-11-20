@@ -24,9 +24,27 @@
 .logo {
 	width: calc(400px / 2);
 	height: auto;
+	@include MQ(S){
+		width: calc(400px / 3);
+	}
 }
-
+.nav-row {
+	display: block;
+	width: 100%;
+	float: left;
+	background-color: $text;
+	.navbar {
+		a {
+			color: #fff !important;
+			text-transform: uppercase;
+			font-weight: 700;
+		}
+	}
+}
 header {
+	display: block;
+	width: 100%;
+	float: left;
 	.header-cta {
 		list-style: none;
 		padding: 0;
@@ -35,9 +53,7 @@ header {
 			display: inline-block;
 			&:not(:last-child){
 				margin-right: 1rem;
-				@include MQ(S){
-					display: none;
-				}
+				
 			}
 		}
 	}
@@ -52,38 +68,62 @@ header {
 	}
 }
 .header-2 {
-	.left, .right, .center-panel {
+
+	.left, .right, .phone, .center-panel {
 		display: flex;
 		float: left;
 		min-height: 10vh;
-		width: 33.33333%;
+
 		align-items: center;
+	}
+	.left {
+		padding-left: 15px;
+		width: 20%;
+	}
+	.phone {
+		width: 15%;
+		font-size: 1.2rem;
+		font-weight: 700;
+		.im-icon {
+			margin-right: 0.5rem;
+		}
+
 	}
 	.center-panel {
 		justify-content: center;
+		width: 50%;
+		form {
+			width: 100%;
+
+		}
 	}
 	.right {
 		justify-content: flex-end;
+		padding-right: 15px;
+		width: 15%;
+		.im-icon {
+			font-size: 2rem;
+			&:hover {
+				color: $brand-primary;
+			}
+		}
 	}
 	.navbar {
 		width: 100%;
 	}
+	
 	@include MQ(S){
-		.left, .center-panel {
+		.left, .right {
 			width: 50%;
 		}
-		.center-panel {
-			justify-content: flex-end;
-			float: right;
+		.center-panel, .phone {
+			display: none;
 		}
 		.right {
-			position: fixed;
-			bottom: 0 !important;
-			width: 100% !important;
-			display: block !important;
-
+			.im-icon {
+				font-size: 1.8rem;
+			}
 		}
-
 	}
 
 }

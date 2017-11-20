@@ -1,5 +1,5 @@
 <div class="top-bar">
-  <div class="container-fluid">
+  <div class="container">
           <?php
             wp_nav_menu( array(
                 'menu'              => 'top-menu',
@@ -13,7 +13,7 @@
 </div>
 
 <nav class="navbar navbar-expand-sm navbar-light bg-faded">
-  
+  <div class="container">
   <!-- Brand -->
 
   <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
@@ -48,5 +48,5 @@
                 'walker'            => new WP_Bootstrap_Navwalker())
             );
     ?>
-
+  </div>
 </nav>

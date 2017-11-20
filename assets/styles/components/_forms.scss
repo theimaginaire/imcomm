@@ -13,3 +13,26 @@
   @extend .btn;
   @extend .btn-secondary;
 }
+
+input[type='search'], .center-panel > form > input[type='submit']{
+    border: 2px solid $grey;
+    outline: none;
+    padding: 0.5rem;
+}
+input[type='search'] {
+    width: 80%;
+    border-radius: 50px 0 0 50px;
+    padding: 0.5rem 1rem;
+}
+.center-panel > form > input[type='submit'] {
+    border-radius: 0;
+    margin-left: -10px;
+    background-color: $brand-primary;
+    color: #fff;
+    border-color: $brand-primary;
+    border-radius: 0 50px 50px 0;
+    &:hover {
+        background-color: darken($brand-primary, 10%);
+        transition: $ease;
+    }
+}

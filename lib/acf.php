@@ -3,7 +3,7 @@ if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array (
 	'key' => 'group_585ac90296fbe',
-	'title' => 'Pages',
+	'title' => 'Hero Area',
 	'fields' => array (
 		array (
 			'key' => 'field_585ac9f3aa64a',
@@ -26,7 +26,7 @@ acf_add_local_field_group(array (
 			'label' => 'Hero/Carousel',
 			'name' => 'hero_carousel',
 			'type' => 'radio',
-			'instructions' => '',
+			'instructions' => 'This will be the main panel for the page',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array (
@@ -115,51 +115,7 @@ acf_add_local_field_group(array (
 					'media_upload' => 1,
 					'delay' => 0,
 				),
-				array (
-					'key' => 'field_585be656747f5',
-					'label' => 'Overlay text',
-					'name' => 'overlay_text',
-					'type' => 'text',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array (
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'default_value' => '',
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => '',
-					'maxlength' => '',
-				),
-				array (
-					'key' => 'field_58665adf1ce40',
-					'label' => 'Align Content',
-					'name' => 'float',
-					'type' => 'select',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array (
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'choices' => array (
-						'left' => 'Left',
-						'right' => 'Right',
-					),
-					'default_value' => array (
-					),
-					'allow_null' => 0,
-					'multiple' => 0,
-					'ui' => 0,
-					'ajax' => 0,
-					'return_format' => 'value',
-					'placeholder' => '',
-				),
+				
 			),
 		),
 		array (
@@ -223,7 +179,7 @@ acf_add_local_field_group(array (
 		),
 		array (
 			'key' => 'field_585bb34f78539',
-			'label' => 'Call To Action',
+			'label' => 'Panel 2',
 			'name' => '',
 			'type' => 'tab',
 			'instructions' => '',
@@ -239,8 +195,8 @@ acf_add_local_field_group(array (
 		),
 		array (
 			'key' => 'field_585bb3597853a',
-			'label' => 'CTA',
-			'name' => 'cta_content',
+			'label' => 'Content',
+			'name' => 'panel2_content',
 			'type' => 'wysiwyg',
 			'instructions' => '',
 			'required' => 0,
@@ -270,9 +226,9 @@ acf_add_local_field_group(array (
 				'id' => '',
 			),
 			'choices' => array (
-				'Upload Image' => 'Upload Image',
-				'Set Colour' => 'Set Colour',
-				'Default Background Colour' => 'Default Background Colour',
+				'image' => 'Upload Image',
+				'colour' => 'Set Colour',
+				'default' => 'Default Background Colour',
 			),
 			'allow_null' => 0,
 			'other_choice' => 0,
@@ -283,8 +239,8 @@ acf_add_local_field_group(array (
 		),
 		array (
 			'key' => 'field_585bb3a47853c',
-			'label' => 'CTA Image',
-			'name' => 'cta_img',
+			'label' => 'Background Image',
+			'name' => 'panel2_img',
 			'type' => 'image',
 			'instructions' => '',
 			'required' => 0,
@@ -293,7 +249,7 @@ acf_add_local_field_group(array (
 					array (
 						'field' => 'field_585bb37a7853b',
 						'operator' => '==',
-						'value' => 'Upload Image',
+						'value' => 'image',
 					),
 				),
 			),
@@ -316,7 +272,7 @@ acf_add_local_field_group(array (
 		array (
 			'key' => 'field_585bb3bb7853d',
 			'label' => 'Background Colour',
-			'name' => 'cta_bg',
+			'name' => 'panel2_bg',
 			'type' => 'color_picker',
 			'instructions' => '',
 			'required' => 0,
@@ -325,7 +281,7 @@ acf_add_local_field_group(array (
 					array (
 						'field' => 'field_585bb37a7853b',
 						'operator' => '==',
-						'value' => 'Set Colour',
+						'value' => 'colour',
 					),
 				),
 			),
@@ -337,11 +293,11 @@ acf_add_local_field_group(array (
 			'default_value' => '',
 		),
 		array (
-			'key' => 'field_585becb78e2a5',
-			'label' => 'Why Choose Us',
+			'key' => 'field_585bb34f77659',
+			'label' => 'Panel 3',
 			'name' => '',
 			'type' => 'tab',
-			'instructions' => '',
+			'instructions' => 'ss',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array (
@@ -353,9 +309,9 @@ acf_add_local_field_group(array (
 			'endpoint' => 0,
 		),
 		array (
-			'key' => 'field_585beccb8e2a6',
-			'label' => 'Why us',
-			'name' => 'why_us',
+			'key' => 'field_585bb35ssa3a',
+			'label' => 'Content',
+			'name' => 'panel3_content',
 			'type' => 'wysiwyg',
 			'instructions' => '',
 			'required' => 0,
@@ -370,6 +326,86 @@ acf_add_local_field_group(array (
 			'toolbar' => 'full',
 			'media_upload' => 1,
 			'delay' => 0,
+		),
+		array (
+			'key' => 'field_58assaa7a7853b',
+			'label' => 'Background Type',
+			'name' => 'background_type',
+			'type' => 'radio',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array (
+				'image' => 'Upload Image',
+				'colour' => 'Set Colour',
+				'default' => 'Default Background Colour',
+			),
+			'allow_null' => 0,
+			'other_choice' => 0,
+			'save_other_choice' => 0,
+			'default_value' => '',
+			'layout' => 'horizontal',
+			'return_format' => 'value',
+		),
+		array (
+			'key' => 'field_58asas3a47853c',
+			'label' => 'Background Image',
+			'name' => 'panel3_img',
+			'type' => 'image',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_58assaa7a7853b',
+						'operator' => '==',
+						'value' => 'image',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'url',
+			'preview_size' => 'thumbnail',
+			'library' => 'all',
+			'min_width' => '',
+			'min_height' => '',
+			'min_size' => '',
+			'max_width' => '',
+			'max_height' => '',
+			'max_size' => '',
+			'mime_types' => '',
+		),
+		array (
+			'key' => 'field_585aswsabb7853d',
+			'label' => 'Background Colour',
+			'name' => 'panel3_bg',
+			'type' => 'color_picker',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_58assaa7a7853b',
+						'operator' => '==',
+						'value' => 'colour',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
 		),
 		
 	),
@@ -414,6 +450,12 @@ acf_add_local_field_group(array (
 				'id' => '',
 			),
 			'layouts' => array (
+				'59c422c5566fe' => array (
+					'key' => '59c422c5566fe',
+					'name' => 'main_content',
+					'label' => 'Main Content (Taken from text editor)',
+					'display' => 'block',
+				),
 				'59c422c3316fe' => array (
 					'key' => '59c422c3316fe',
 					'name' => 'fw_image',
