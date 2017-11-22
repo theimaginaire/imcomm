@@ -1,3 +1,4 @@
+<?php if(have_rows('carousel') || get_field('hero_content')): ?>
 <div class="container-fluid">
 <section class="hero-area">
 
@@ -38,8 +39,8 @@
                 </div>
             </section>
             <?php 
-            else: 
-                get_template_part('templates/page', 'header');
+
+                
             endif;
 
             ?>
@@ -47,6 +48,7 @@
         </div>
         <!-- Panel 2 -->
         <?php 
+        if(get_field('panel2_content')):
             $bg_type = get_field('background_type');
             if($bg_type=='image'):
                 $style = 'background-image:url('.get_field('panel2_img').');';
@@ -55,6 +57,7 @@
             else:
                 $class = 'primary-bg';
             endif;
+        endif;
         ?>
         <div class="panel-col <?php if($class) echo $class; ?>" <?php if($style): ?>style="<?php echo $style; ?>" <?php endif; ?>>
             
@@ -65,6 +68,7 @@
         
         <!-- Panel 3 -->
         <?php 
+        if(get_field('panel3_content')):
             $bg_type = get_field('background_type');
             if($bg_type=='image'):
                 $style = 'background-image:url('.get_field('panel3_img').');';
@@ -73,6 +77,7 @@
             else:
                 $class = 'primary-bg';
             endif;
+        endif;
         ?>
         <div class="panel-col <?php if($class) echo $class; ?>" <?php if($style): ?>style="<?php echo $style; ?>" <?php endif; ?>>
             
@@ -84,3 +89,9 @@
   
 </section>
 </div>  
+<?php 
+// If no carousel or hero content found
+else: 
+    get_template_part('templates/page', 'header');
+endif;
+

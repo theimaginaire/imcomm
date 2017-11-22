@@ -1,5 +1,5 @@
 <div class="top-bar">
-  <div class="container-fluid">
+  <div class="container">
           <?php
             wp_nav_menu( array(
                 'menu'              => 'top-menu',
@@ -13,7 +13,7 @@
 </div>
 
 <header class="header-2">
-<div class="container-fluid">
+<div class="container">
   <div class="row">
     
     <div class="left">
@@ -42,9 +42,9 @@
           <li class="d-none d-sm-inline-block">
               <a href="<?php echo do_shortcode('[my_acc]'); ?>"><i class="im-icon im-my-account"></i></a>
           </li>
-          <li class="d-none d-sm-inline-block">
-            <i class="im-icon im-star"></i>
-          </li>
+          <!-- <li class="d-none d-sm-inline-block">
+            <a href=="<?php echo esc_url( $wishlist_url ); ?>"><i class="im-icon im-star"></i></a>
+          </li> -->
           <li class="d-inline-block d-sm-none">
             <a href="#" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation"><i class="im-icon im-menu"></i></a>
           </li>
@@ -74,4 +74,29 @@
     ?>
   </div>
 </nav>
+</div>
+
+<div class="usp-bar">
+  <div class="container">
+    <?php
+
+    // check if the repeater field has rows of data
+    if( have_rows('usp', 'options') ):
+
+      // loop through the rows of data
+        while ( have_rows('usp', 'options') ) : the_row();
+        ?>
+        <div class="usp">
+            <? if(get_sub_field('icon')): ?>
+              <i class="im-icon <?php the_sub_field('icon'); ?>"></i> 
+            <?php endif; ?>
+            <? the_sub_field('content'); ?>
+        </div>
+        <?php 
+        endwhile;
+
+    endif;
+
+    ?>
+  </div>
 </div>

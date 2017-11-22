@@ -47,3 +47,23 @@ function my_custom_login() {
 add_action('login_head', 'my_custom_login');
 
 add_filter('show_admin_bar', '__return_false');
+
+add_filter( 'get_the_archive_title', function ($title) {
+
+    if ( is_category() || is_product_category() ) {
+
+            $title = single_cat_title( '', false );
+
+        } elseif ( is_tag() || is_product_tag() ) {
+
+            $title = single_tag_title( '', false );
+
+        } elseif ( is_author() ) {
+
+            $title = '<span class="vcard">' . get_the_author() . '</span>' ;
+
+        }
+
+    return $title;
+
+});

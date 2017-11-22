@@ -1,0 +1,13 @@
+.add_to_wishlist {
+    display: inline-block;
+    background-color: $grey;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    color: $text;
+    margin: 1rem 0;
+    &:hover {
+        background-color: $brand-primary;
+        color: #fff;
+        text-decoration: none;
+    }
+}

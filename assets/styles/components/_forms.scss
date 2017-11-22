@@ -19,7 +19,7 @@ input[type='search'], .center-panel > form > input[type='submit']{
     outline: none;
     padding: 0.5rem;
 }
-input[type='search'] {
+.center-panel > form > input[type='search'] {
     width: 80%;
     border-radius: 50px 0 0 50px;
     padding: 0.5rem 1rem;

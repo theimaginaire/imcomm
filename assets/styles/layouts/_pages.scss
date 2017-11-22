@@ -1,7 +1,12 @@
-.page-header {
-	background-color: $brand-primary;
-	color: #fff;
+.hero-area, .page-header {
+	float: left;
+	width: 100%;
 	padding: $smlspace;
+}
+.page-header {
+	background-color: $lightgrey;
+	color: $text;
+	margin-bottom: 2rem;
 }
 
 // Content blocks
@@ -22,9 +27,6 @@
 }
 
 .hero-area {
-	padding: $smlspace;
-	float: left;
-	width: 100%;
 	.panel-row {
 		display: flex;
 		height: 70vh;

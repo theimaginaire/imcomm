@@ -1,7 +1,13 @@
+.top-bar, .nav-row, header, .usp-bar {
+	width: 100%;
+	float: left;
+}
+
 .top-bar {
 	background-color: $lightgrey;
-	width: 100%;
 	padding: 0.5rem 0;
+	padding-left: 15px;
+	padding-right: 15px;
 	.top-menu {
 		display: flex;
 		list-style: none;
@@ -9,7 +15,7 @@
 		li {
 			display: inline-block;
 			&:not(:last-of-type){
-				margin-right: 0.5rem;
+				margin-right: 1rem;
 			}
 			a {
 				color: $text;
@@ -29,22 +35,28 @@
 	}
 }
 .nav-row {
-	display: block;
-	width: 100%;
-	float: left;
-	background-color: $text;
+	background-color: $grey;
 	.navbar {
 		a {
-			color: #fff !important;
+			color: $text !important;
 			text-transform: uppercase;
 			font-weight: 700;
+			padding: 0.5rem 2rem !important;
+		}
+	}
+}
+.dropdown-menu {
+	background-color: lighten($grey, 10%);
+	li {
+		a {
+			padding: 0.5rem 3rem;
+			&:hover {
+				background: $brand-primary;
+			}
 		}
 	}
 }
 header {
-	display: block;
-	width: 100%;
-	float: left;
 	.header-cta {
 		list-style: none;
 		padding: 0;
@@ -62,11 +74,7 @@ header {
 		margin: 0;
 	}
 }
-.header-1 {
-	.navbar {
-		padding: 0rem 0rem;
-	}
-}
+
 .header-2 {
 
 	.left, .right, .phone, .center-panel {
@@ -84,14 +92,17 @@ header {
 		width: 15%;
 		font-size: 1.2rem;
 		font-weight: 700;
+		margin-left: 17.5%;
 		.im-icon {
 			margin-right: 0.5rem;
+			color: $brand-primary;
 		}
 
 	}
 	.center-panel {
 		justify-content: center;
-		width: 50%;
+		width: 30%;
+		margin-left: 2.5%;
 		form {
 			width: 100%;
 
@@ -110,6 +121,9 @@ header {
 	}
 	.navbar {
 		width: 100%;
+
+			
+
 	}
 	
 	@include MQ(S){
@@ -126,4 +140,31 @@ header {
 		}
 	}
 
+}
+
+.usp-bar {
+	
+	background-color: $brand-primary;
+	padding: 1rem 0;
+	.container {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		align-items: stretch;
+	}
+	.usp {
+
+		text-align: center;
+		flex-grow: 1;
+		color: #fff;
+		i {
+			margin-right: 1rem;
+		}
+		&:not(:last-of-type){
+			border-right: 2px solid #fff;
+		}
+	}
+	@include MQ(S){
+		display: none;
+	}
 }
